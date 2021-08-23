@@ -1,0 +1,16 @@
+<!-- Write your comments here -->
+<!-- This is the first page you will land on when you enter the website and run shotgun-->
+
+<!-- Create an unordered list -->
+<ul>
+
+<!-- Iterate over the article and list out the path that will look like /articles/id -->
+<!-- Then list out the article title which is defined in the model-->
+<% @articles.each do |article| %>
+<li>    
+    <a href="/articles/<%= article.id %>">
+    <%= article.title %>
+    </a>
+</li>
+<% end %>
+</ul>

@@ -1,0 +1,21 @@
+<!-- This would be the second view to create -->
+<!-- When creating something new, you must have a form for the user to input data into -->
+
+<!-- forms always start like this and the method for new forms is always post-->
+<!-- Think of this as you are posting the new info into the database-->
+<form action="/articles" method="post">
+<ul>
+    <li>
+    <!-- labels always need a for and an input id with a name-->
+     <!--This form will look like 1.Title 2. Content in an unordered list-->
+        <label for="title">Title</label>
+        <input id="title" type="text" name="title" />
+    </li>
+    <li>
+        <label for="content">Content</label>
+        <input id="content" type="text" name="content" />
+    </li>
+</ul>
+<!-- ALL FORMS NEED A SUBMIT BUTTON! and an end form-->
+    <input type="submit" />
+</form>

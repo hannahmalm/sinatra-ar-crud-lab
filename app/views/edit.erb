@@ -1,0 +1,23 @@
+<!--This form will be used to edit current entries -->
+<!--This form action looks like posting the domain/articles/id -->
+<form action="/articles/<%= @article.id %>" method="post">
+<!--Patch value means that something is being edited  -->
+<!--A hidden field let web developers include data that cannot be seen or modified by users when a form is submitted. -->
+<!--A hidden field often stores what database record that needs to be updated when the form is submitted.-->
+<input type="hidden" name="_method" value="patch">
+<ul>
+<!--This is the same as the new.erb form accept the name is different because its nested-->
+    <li>
+        <label for="title">Title</label>
+        <input id="title" type="text" name="article[title]" value="<%= @article.title %>" />
+    </li>
+
+    <li>
+        <label for="content">Content</label>
+        <input id="content" type="text" name="article[content]" value="<%= @article.content %>" />
+    </li>
+</ul>
+
+<!--INPUT TYPE MUST BE SUBMIT AT THE END OF A FORM -->
+<input type="submit">
+</form>

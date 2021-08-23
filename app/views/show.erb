@@ -1,0 +1,11 @@
+<!--This view will show the article title and the content-->
+<h2><%= @article.title %></h2>
+<h2><%= @article.content %></h2>
+
+
+<!--This form will be able to be added to or edited -->
+<!--This form will post the articles and delete any new article -->
+<form method="post" action="/articles/<%= @article.id %>">
+    <input type="hidden" name="_method" value="delete" />
+    <input type="submit" />
+</form>
